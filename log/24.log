@@ -1,0 +1,10 @@
+-r-xr-sr-x. 1 root tty 15344  6월 10  2014 /usr/bin/wall
+-rwxr-sr-x. 1 root tty 19544  2월  3  2021 /usr/bin/write
+---x--s--x 1 root nobody 382216 11월 25  2021 /usr/bin/ssh-agent
+-rwxr-sr-x 1 root mail 19824 11월 29  2017 /usr/bin/lockfile
+-rwxr-sr-x 1 root root 11224 11월 17  2020 /usr/sbin/netreport
+-rwxr-sr-x. 1 root postdrop 218560  4월  1  2020 /usr/sbin/postdrop
+-rwxr-sr-x. 1 root postdrop 264128  4월  1  2020 /usr/sbin/postqueue
+-rwxr-sr-x 1 root smmsp 836920  4월  1  2020 /usr/sbin/sendmail.sendmail
+-rwx--s--x. 1 root utmp 11192  6월 10  2014 /usr/libexec/utempter/utempter
+---x--s--x 1 root ssh_keys 465760 11월 25  2021 /usr/libexec/openssh/ssh-keysign

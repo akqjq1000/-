@@ -19,7 +19,7 @@ if [ "$VALUE1" = "" ] ; then
 	echo "$VALUE1" >> $RESULT
 	retval="warning"
 else
-	minlen=$(cat /etc/security/pwquality.conf | grep -E -v "^#|^$" | grep minlen | awk -F= '{print $2}' | tr -d ' ')
+	minlen=$(cat $pwquality_conf | grep -E -v "^#|^$" | grep minlen | awk -F= '{print $2}' | tr -d ' ')
 	if [ $minlen -ge 8 ] ; then
 		dcredit=$(cat $pwquality_conf | grep -E -v '^#|^$' | grep dcredit | awk -F= '{print $2}' | tr -d ' ')
 		ucredit=$(cat $pwquality_conf | grep -E -v '^#|^$' | grep ucredit | awk -F= '{print $2}' | tr -d ' ')
@@ -30,7 +30,7 @@ else
 			retval="ok"
 		else
 			echo "[WARN] 패스워드가 8글자 이상이지만 dcredit|ucredit|lcredit|ocredit 중 설정이 없는 것이 존재합니다."  >> $RESULT
-			cat /etc/security/pwquality.conf | egrep -v '(^$|^#)' >> $RESULT
+			cat $pwquality_conf | grep -v -E '^#|^$' >> $RESULT
 			cat << EOF >> $RESULT
 =============================================================
 다음은 /etc/security/pwquality.conf 파일을 해석할 때 사용하는 내용입니다.
