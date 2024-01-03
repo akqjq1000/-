@@ -1,0 +1,62 @@
+************************************************************************************
+ [U-16] /dev에 존재하지 않는 device 파일 점검
+ [양호] dev에 대한 파일 점검 후 존재하지 않은 device 파일을 제거한 경우
+ [취약] dev에 대한 파일 미점검 또는, 존재하지 않은 device 파일을 방치한 경우
+************************************************************************************
+[WARN] 파일이 존재합니다. 
+-rw-r--r--. 1 root root 81 2024-01-03 03:18 /dev/.udev/queue.bin
+-rw-r--r--. 1 root root 581 2024-01-03 02:48 /dev/.udev/db/block:sda1
+-rw-r--r--. 1 root root 775 2024-01-03 02:48 /dev/.udev/db/block:dm-0
+-rw-r--r--. 1 root root 640 2024-01-03 02:48 /dev/.udev/db/block:sda2
+-rw-r--r--. 1 root root 336 2024-01-03 02:48 /dev/.udev/db/net:eth0
+-rw-r--r--. 1 root root 201 2024-01-03 02:48 /dev/.udev/db/sound:card0
+-rw-r--r--. 1 root root 102 2024-01-03 02:48 /dev/.udev/db/sound:controlC0
+-rw-r--r--. 1 root root 36 2024-01-03 02:48 /dev/.udev/db/sound:dmmidi
+-rw-r--r--. 1 root root 34 2024-01-03 02:48 /dev/.udev/db/sound:midi
+-rw-r--r--. 1 root root 43 2024-01-03 02:48 /dev/.udev/db/sound:midiC0D0
+-rw-r--r--. 1 root root 43 2024-01-03 02:48 /dev/.udev/db/sound:pcmC0D1p
+-rw-r--r--. 1 root root 43 2024-01-03 02:48 /dev/.udev/db/sound:pcmC0D0c
+-rw-r--r--. 1 root root 43 2024-01-03 02:48 /dev/.udev/db/sound:pcmC0D0p
+-rw-r--r--. 1 root root 537 2024-01-03 02:48 /dev/.udev/db/input:event4
+-rw-r--r--. 1 root root 38 2024-01-03 02:48 /dev/.udev/db/sound:seq
+-rw-r--r--. 1 root root 525 2024-01-03 02:48 /dev/.udev/db/input:mouse2
+-rw-r--r--. 1 root root 40 2024-01-03 02:48 /dev/.udev/db/sound:timer
+-rw-r--r--. 1 root root 54 2024-01-03 02:48 /dev/.udev/db/input:event1
+-rw-r--r--. 1 root root 369 2024-01-03 02:47 /dev/.udev/db/block:sda
+-rw-r--r--. 1 root root 910 2024-01-03 02:47 /dev/.udev/db/block:dm-1
+-rw-r--r--. 1 root root 54 2024-01-03 02:47 /dev/.udev/db/input:event0
+-rw-r--r--. 1 root root 176 2024-01-03 02:47 /dev/.udev/db/input:event3
+-rw-r--r--. 1 root root 144 2024-01-03 02:47 /dev/.udev/db/input:mouse1
+-rw-r--r--. 1 root root 304 2024-01-03 02:47 /dev/.udev/db/usb:2-1
+-rw-r--r--. 1 root root 322 2024-01-03 02:47 /dev/.udev/db/usb:2-2
+-rw-r--r--. 1 root root 429 2024-01-03 02:47 /dev/.udev/db/usb:usb2
+-rw-r--r--. 1 root root 427 2024-01-03 02:47 /dev/.udev/db/usb:usb1
+-rw-r--r--. 1 root root 172 2024-01-03 02:47 /dev/.udev/db/input:event2
+-rw-r--r--. 1 root root 804 2024-01-03 02:47 /dev/.udev/db/block:sr0
+-rw-r--r--. 1 root root 84 2024-01-03 02:47 /dev/.udev/db/block:ram9
+-rw-r--r--. 1 root root 84 2024-01-03 02:47 /dev/.udev/db/block:ram7
+-rw-r--r--. 1 root root 84 2024-01-03 02:47 /dev/.udev/db/block:ram8
+-rw-r--r--. 1 root root 84 2024-01-03 02:47 /dev/.udev/db/block:ram6
+-rw-r--r--. 1 root root 84 2024-01-03 02:47 /dev/.udev/db/block:ram4
+-rw-r--r--. 1 root root 84 2024-01-03 02:47 /dev/.udev/db/block:ram3
+-rw-r--r--. 1 root root 84 2024-01-03 02:47 /dev/.udev/db/block:ram5
+-rw-r--r--. 1 root root 86 2024-01-03 02:47 /dev/.udev/db/block:ram15
+-rw-r--r--. 1 root root 84 2024-01-03 02:47 /dev/.udev/db/block:ram2
+-rw-r--r--. 1 root root 86 2024-01-03 02:47 /dev/.udev/db/block:ram14
+-rw-r--r--. 1 root root 86 2024-01-03 02:47 /dev/.udev/db/block:ram13
+-rw-r--r--. 1 root root 86 2024-01-03 02:47 /dev/.udev/db/block:ram12
+-rw-r--r--. 1 root root 84 2024-01-03 02:47 /dev/.udev/db/block:ram0
+-rw-r--r--. 1 root root 86 2024-01-03 02:47 /dev/.udev/db/block:ram11
+-rw-r--r--. 1 root root 84 2024-01-03 02:47 /dev/.udev/db/block:ram1
+-rw-r--r--. 1 root root 86 2024-01-03 02:47 /dev/.udev/db/block:ram10
+-rw-r--r--. 1 root root 85 2024-01-03 02:47 /dev/.udev/db/block:loop7
+-rw-r--r--. 1 root root 85 2024-01-03 02:47 /dev/.udev/db/block:loop5
+-rw-r--r--. 1 root root 85 2024-01-03 02:47 /dev/.udev/db/block:loop2
+-rw-r--r--. 1 root root 85 2024-01-03 02:47 /dev/.udev/db/block:loop1
+-rw-r--r--. 1 root root 85 2024-01-03 02:47 /dev/.udev/db/block:loop6
+-rw-r--r--. 1 root root 85 2024-01-03 02:47 /dev/.udev/db/block:loop4
+-rw-r--r--. 1 root root 85 2024-01-03 02:47 /dev/.udev/db/block:loop0
+-rw-r--r--. 1 root root 85 2024-01-03 02:47 /dev/.udev/db/block:loop3
+-rw-r--r--. 1 root root 26 2024-01-03 02:47 /dev/.udev/db/serio:serio0
+-rw-r--r--. 1 root root 40 2024-01-03 02:47 /dev/.udev/db/drm:card0
+-rw-r--r--. 1 root root 103 2024-01-03 02:47 /dev/.udev/rules.d/99-root.rules
