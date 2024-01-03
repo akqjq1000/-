@@ -1,10 +1,7 @@
 #!/bin/bash
 
-<<<<<<< HEAD
 . ./util/common.sh
 
-=======
->>>>>>> 5287d91a8af65f55c780408ec3019ddf2033456a
 RESULT=./log/01.log
 >$RESULT
 
@@ -16,7 +13,6 @@ echo "**************************************************************************
 
 retval=""
 
-<<<<<<< HEAD
 version=$(getVersion)
 
 if [ "$version" == "5.9" ] || [ "$version" == "5.11" ] || [ "$version" == "6.10" ] ; then
@@ -92,8 +88,6 @@ elif [ "$version" == "7.9" ] ; then
         fi
 	
 fi
-
-=======
 TELNET_SERVICE=telnet.socket
 SECURETTY=/etc/securetty
 STATUS1=$(systemctl is-active $TELNET_SERVICE)
@@ -133,5 +127,4 @@ else
 		WARN 'SSH 서비스가 실행중이지 않습니다.' >> $RESULT
 	fi
 fi
->>>>>>> 5287d91a8af65f55c780408ec3019ddf2033456a
 echo "$retval"

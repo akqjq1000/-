@@ -1,10 +1,7 @@
 #!/bin/bash
 
-<<<<<<< HEAD
 . ./util/common.sh
 
-=======
->>>>>>> 5287d91a8af65f55c780408ec3019ddf2033456a
 RESULT=./log/06.log
 >$RESULT
 
@@ -16,17 +13,14 @@ echo "**************************************************************************
 
 retval=""
 
-<<<<<<< HEAD
 version=$(getVersion)
 
 which_su=$(which su)
 
 su_permission=$(stat -c %a $which_su)
 su_group=$(stat -c %G $which_su)
-=======
 su_permission=$(stat -c %a /usr/bin/su)
 su_group=$(stat -c %G /usr/bin/su)
->>>>>>> 5287d91a8af65f55c780408ec3019ddf2033456a
 
 if [ "$su_permission" -le 4750 ] && [ "$su_group" = "wheel" ] ; then
 	echo '[INFO] wheel 그룹을 통해 제한하고 있습니다.' >> $RESULT
