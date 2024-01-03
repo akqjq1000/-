@@ -20,10 +20,12 @@ ps -ef | egrep "ypserv|ypbind|ypxfrd|rpc.yppasswdd|rpc.ypupdated" | grep -v grep
 if [ -s $TMP ] ; then
 	cat $TMP | while read PID PROCESS
 	do
-		WARN $PID / $PROCESS 가 구동중 입니다. 
+		WARN "$PID / $PROCESS 가 구동중 입니다." >>$RESULT
+		retval="warning"
 	done
 else
-	OK NIS 서비스가 비활성화 되어있습니다.
+	OK "NIS 서비스가 비활성화 되어있습니다.">>$RESULT
+	retval="ok"
 fi
 
 echo "$retval"

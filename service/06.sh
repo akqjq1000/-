@@ -19,8 +19,6 @@ which_su=$(which su)
 
 su_permission=$(stat -c %a $which_su)
 su_group=$(stat -c %G $which_su)
-su_permission=$(stat -c %a /usr/bin/su)
-su_group=$(stat -c %G /usr/bin/su)
 
 if [ "$su_permission" -le 4750 ] && [ "$su_group" = "wheel" ] ; then
 	echo '[INFO] wheel 그룹을 통해 제한하고 있습니다.' >> $RESULT

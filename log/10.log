@@ -14,10 +14,7 @@
  
 ==================================================================
 root:x:0:0:root:/root:/bin/bash
-mrtg:x:1000:1000::/home/mrtg:/bin/bash
-lejus:x:1001:1001::/home/lejus:/bin/bash
-mrtg-2.17.4:x:1003:1003::/home/mrtg-2.17.4:/bin/bash
-test:x:1004:1004::/home/test:/bin/bash
+lejus:x:500:500::/home/lejus:/bin/bash
 
 [lastlog 명령어의 출력내용]
 ==================================================================
@@ -27,7 +24,7 @@ test:x:1004:1004::/home/test:/bin/bash
  
 ==================================================================
 사용자이름       포트     어디서           최근정보
-root             pts/0                     수  1월  3 11:33:14 +0900 2024
+root             pts/0    192.168.48.1     수  1월  3 02:48:30 +0900 2024
 bin                                        **한번도 로그인한 적이 없습니다**
 daemon                                     **한번도 로그인한 적이 없습니다**
 adm                                        **한번도 로그인한 적이 없습니다**
@@ -36,30 +33,21 @@ sync                                       **한번도 로그인한 적이 없�
 shutdown                                   **한번도 로그인한 적이 없습니다**
 halt                                       **한번도 로그인한 적이 없습니다**
 mail                                       **한번도 로그인한 적이 없습니다**
+uucp                                       **한번도 로그인한 적이 없습니다**
 operator                                   **한번도 로그인한 적이 없습니다**
 games                                      **한번도 로그인한 적이 없습니다**
+gopher                                     **한번도 로그인한 적이 없습니다**
+ftp                                        **한번도 로그인한 적이 없습니다**
 nobody                                     **한번도 로그인한 적이 없습니다**
-systemd-network                            **한번도 로그인한 적이 없습니다**
-dbus                                       **한번도 로그인한 적이 없습니다**
-polkitd                                    **한번도 로그인한 적이 없습니다**
-sshd                                       **한번도 로그인한 적이 없습니다**
-postfix                                    **한번도 로그인한 적이 없습니다**
-chrony                                     **한번도 로그인한 적이 없습니다**
-apache                                     **한번도 로그인한 적이 없습니다**
-mrtg             pts/0                     수  1월  3 11:33:14 +0900 2024
-tcpdump                                    **한번도 로그인한 적이 없습니다**
+vcsa                                       **한번도 로그인한 적이 없습니다**
 saslauth                                   **한번도 로그인한 적이 없습니다**
-tss                                        **한번도 로그인한 적이 없습니다**
-named                                      **한번도 로그인한 적이 없습니다**
-mysql                                      **한번도 로그인한 적이 없습니다**
-lejus            pts/1    192.168.48.158   수  1월  3 14:30:11 +0900 2024
-mrtg-2.17.4      pts/0                     수  1월  3 11:33:14 +0900 2024
+postfix                                    **한번도 로그인한 적이 없습니다**
+sshd                                       **한번도 로그인한 적이 없습니다**
+tcpdump                                    **한번도 로그인한 적이 없습니다**
+lejus            pts/1    192.168.48.158   수  1월  3 03:20:42 +0900 2024
 rpc                                        **한번도 로그인한 적이 없습니다**
 mailnull                                   **한번도 로그인한 적이 없습니다**
 smmsp                                      **한번도 로그인한 적이 없습니다**
-rpcuser                                    **한번도 로그인한 적이 없습니다**
-test             pts/0                     수  1월  3 11:33:14 +0900 2024
-nfsnobody                                  **한번도 로그인한 적이 없습니다**
 
 [su 명령어의 실패시도 내용]
 ==================================================================
@@ -68,19 +56,3 @@ nfsnobody                                  **한번도 로그인한 적이 없�
 (ㄴ) 일반사용자에서 root 사용자로 전환하는 경우를 중점적으로 점검한다.
  
 ==================================================================
-Dec 19 18:04:41 mrtg su: pam_unix(su-l:auth): authentication failure; logname=lejus uid=1001 euid=0 tty=pts/1 ruser=lejus rhost=  user=root
-Dec 19 18:04:54 mrtg su: pam_unix(su-l:auth): authentication failure; logname=lejus uid=1001 euid=0 tty=pts/1 ruser=lejus rhost=  user=root
-Dec 19 18:05:00 mrtg su: pam_unix(su-l:auth): authentication failure; logname=lejus uid=1001 euid=0 tty=pts/1 ruser=lejus rhost=  user=root
-Dec 19 18:05:22 mrtg su: pam_unix(su-l:auth): authentication failure; logname=lejus uid=1001 euid=0 tty=pts/1 ruser=lejus rhost=  user=root
-Dec 19 18:07:22 mrtg su: pam_unix(su-l:auth): authentication failure; logname=lejus uid=1001 euid=0 tty=pts/1 ruser=lejus rhost=  user=root
-Dec 19 18:07:27 mrtg su: pam_unix(su-l:auth): authentication failure; logname=lejus uid=1001 euid=0 tty=pts/1 ruser=lejus rhost=  user=root
-Dec 19 18:07:33 mrtg su: pam_unix(su-l:auth): authentication failure; logname=lejus uid=1001 euid=0 tty=pts/1 ruser=lejus rhost=  user=root
-Dec 19 18:07:40 mrtg su: pam_unix(su-l:auth): authentication failure; logname=lejus uid=1001 euid=0 tty=pts/1 ruser=lejus rhost=  user=root
-Dec 19 18:09:11 mrtg su: pam_unix(su-l:auth): authentication failure; logname=lejus uid=1001 euid=0 tty=pts/1 ruser=lejus rhost=  user=root
-Dec 19 18:09:26 mrtg su: pam_unix(su-l:auth): authentication failure; logname=lejus uid=1001 euid=0 tty=pts/1 ruser=lejus rhost=  user=root
-Dec 19 18:09:32 mrtg su: pam_unix(su-l:auth): authentication failure; logname=lejus uid=1001 euid=0 tty=pts/1 ruser=lejus rhost=  user=root
-Dec 19 18:09:43 mrtg su: pam_unix(su-l:auth): authentication failure; logname=lejus uid=1001 euid=0 tty=pts/1 ruser=lejus rhost=  user=root
-Dec 20 09:57:40 mrtg su: pam_unix(su-l:auth): authentication failure; logname=lejus uid=1001 euid=0 tty=pts/1 ruser=lejus rhost=  user=root
-Dec 20 09:58:18 mrtg su: pam_unix(su-l:auth): authentication failure; logname=lejus uid=1001 euid=0 tty=pts/1 ruser=lejus rhost=  user=root
-Dec 20 09:58:28 mrtg su: pam_unix(su-l:auth): authentication failure; logname=lejus uid=1001 euid=0 tty=pts/1 ruser=lejus rhost=  user=root
-Dec 20 09:59:08 mrtg su: pam_unix(su-l:auth): authentication failure; logname=lejus uid=1001 euid=0 tty=pts/1 ruser=lejus rhost=  user=root

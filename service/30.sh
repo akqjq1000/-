@@ -35,10 +35,12 @@ if [ $? = 0 ] ; then
 	                fi
 	        else
 	                echo "[WARN] 파일의 소유자가 root가 아닙니다.">>$RESULT
+			retval="warning"
 	        fi
 	else
         	echo "[INFO] $CHECK_FILE 이 존재하지 않습니다.">>$RESULT
 	        echo "[OK] 프린트 서비스를 사용하지 않습니다.">>$RESULT
+		retval="ok"
 	fi
 else
         :

@@ -5,5 +5,5 @@
 ************************************************************************************
 [35m[ 정보 ] : telnet 서비스 있음![0m
 [32m[ 양호 ] : telnet 서비스 구동되지 않음[0m
-[32m[ 양호 ] : root 직접 접속이 차단되어 있습니다.[0m
-[OK] /etc/ssh/sshd_config 파일에 PermitRootLogin이 no로 설정되어 있습니다.
+[35m[ 정보 ] : SSHD 구동 PID 1553 1397[0m
+[31m[ 취약 ] : /etc/ssh/sshd_config의 PermitRootLogin을 no로 변경해주세요.[0m

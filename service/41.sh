@@ -16,10 +16,10 @@ retval=""
 cat /etc/exports | grep -v -E "^#|^$" | grep -E "no_root_squash|insecure|rw" >> $RESULT
 
 if [ $? -eq 0 ] ; then
-	WARN "설정 중 no_root_squash, insecure, rw 설정이 포함되어 있습니다."
+	WARN "설정 중 no_root_squash, insecure, rw 설정이 포함되어 있습니다." >>$RESULT
 	retval="warning"
 else
-	OK "설정이 올바르게 되어있습니다."
+	OK "설정이 올바르게 되어있습니다.">>$RESULT
 	retval="ok"
 fi
 

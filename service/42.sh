@@ -16,10 +16,10 @@ retval=""
 ps -ef | grep -v grep | grep "automount" >> $RESULT
 
 if [ $? -eq 0 ] ; then
-	WARN "automountd 서비스를 종료해주세요."
+	WARN "automountd 서비스를 종료해주세요.">>$RESULT
 	retval="warning"
 else
-	OK "automountd 서비스가 비활성화 되어있습니다."
+	OK "automountd 서비스가 비활성화 되어있습니다.">>$RESULT
 	retval="ok"
 fi
 
