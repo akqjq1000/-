@@ -1,1 +1,5 @@
+<<<<<<< HEAD
 execute.sh: line 19: ./service/36.sh: 그런 파일이나 디렉터리가 없습니다
+=======
+execute.sh: line 19: ./service/26.sh: 그런 파일이나 디렉터리가 없습니다
+>>>>>>> 5287d91a8af65f55c780408ec3019ddf2033456a

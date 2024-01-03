@@ -3,6 +3,7 @@
  [양호] dev에 대한 파일 점검 후 존재하지 않은 device 파일을 제거한 경우
  [취약] dev에 대한 파일 미점검 또는, 존재하지 않은 device 파일을 방치한 경우
 ************************************************************************************
+<<<<<<< HEAD
 [WARN] 파일이 존재합니다. 
 -rw-r--r--. 1 root root 81 2024-01-03 03:18 /dev/.udev/queue.bin
 -rw-r--r--. 1 root root 581 2024-01-03 02:48 /dev/.udev/db/block:sda1
@@ -60,3 +61,6 @@
 -rw-r--r--. 1 root root 26 2024-01-03 02:47 /dev/.udev/db/serio:serio0
 -rw-r--r--. 1 root root 40 2024-01-03 02:47 /dev/.udev/db/drm:card0
 -rw-r--r--. 1 root root 103 2024-01-03 02:47 /dev/.udev/rules.d/99-root.rules
+=======
+[OK] 파일이 존재하지 않습니다. 
+>>>>>>> 5287d91a8af65f55c780408ec3019ddf2033456a

@@ -3,6 +3,7 @@
  [양호] 소유자가 존재하지 않는 파일 및 디렉터리가 존재하지 않는 경우
  [취약] 소유자가 존재하지 않는 파일 및 디렉터리가 존재하는 경우
 ************************************************************************************
+<<<<<<< HEAD
 [WARN] 소유자가 존재하지 않은 파일 및 디렉토리가 있습니다.
 다음 명령어가 실행된 출력 결과입니다.
 CMD : find / \( -nouser -o -nogroup \) -ls 2>/dev/null
@@ -1277,3 +1278,6 @@ CMD : find / \( -nouser -o -nogroup \) -ls 2>/dev/null
 397214    8 -rw-r--r--   1 274      wheel        4346  5월 15  2002 /usr/local/src/net-snmp-5.1.4.2/agent/kernel.c
 397245    4 -rw-r--r--   1 274      wheel        1348  4월 20  2002 /usr/local/src/net-snmp-5.1.4.2/agent/m2m.h
 396904    4 -rw-r--r--   1 274      wheel        3525  8월  2  2002 /usr/local/src/net-snmp-5.1.4.2/agent/snmp_perl.c
+=======
+[OK] 소유자가 존재하지 않은 파일 및 디렉토리가 없습니다.
+>>>>>>> 5287d91a8af65f55c780408ec3019ddf2033456a

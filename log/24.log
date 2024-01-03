@@ -1,3 +1,4 @@
+<<<<<<< HEAD
 -rwxr-sr-x. 1 root root 5512 2018-06-20 01:12 /sbin/netreport
 -rwxr-sr-x. 1 root tty 12016 2018-01-26 16:41 /usr/bin/write
 -r-xr-sr-x. 1 root tty 11104 2015-07-24 07:21 /usr/bin/wall
@@ -5,3 +6,15 @@
 -rwxr-sr-x. 1 root postdrop 217832 2017-03-24 01:43 /usr/sbin/postqueue
 -rwxr-sr-x. 1 root postdrop 189000 2017-03-24 01:43 /usr/sbin/postdrop
 -rwx--s--x. 1 root utmp 6800 2010-08-19 01:14 /usr/libexec/utempter/utempter
+=======
+-r-xr-sr-x. 1 root tty 15344  6월 10  2014 /usr/bin/wall
+-rwxr-sr-x. 1 root tty 19544  2월  3  2021 /usr/bin/write
+---x--s--x 1 root nobody 382216 11월 25  2021 /usr/bin/ssh-agent
+-rwxr-sr-x 1 root mail 19824 11월 29  2017 /usr/bin/lockfile
+-rwxr-sr-x 1 root root 11224 11월 17  2020 /usr/sbin/netreport
+-rwxr-sr-x. 1 root postdrop 218560  4월  1  2020 /usr/sbin/postdrop
+-rwxr-sr-x. 1 root postdrop 264128  4월  1  2020 /usr/sbin/postqueue
+-rwxr-sr-x 1 root smmsp 836920  4월  1  2020 /usr/sbin/sendmail.sendmail
+-rwx--s--x. 1 root utmp 11192  6월 10  2014 /usr/libexec/utempter/utempter
+---x--s--x 1 root ssh_keys 465760 11월 25  2021 /usr/libexec/openssh/ssh-keysign
+>>>>>>> 5287d91a8af65f55c780408ec3019ddf2033456a
