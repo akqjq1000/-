@@ -44,7 +44,7 @@ if [ "$version" == "5.9" ] || [ "$version" == "5.11" ] || [ "$version" == "6.10"
                 echo $cracklib >> $RESULT
                 retval="warning"
         fi
-elif [ "$version" == "7.9" ] ; then
+else
         pwquality_conf=/etc/security/pwquality.conf
 
         VALUE1=$(cat $pwquality_conf | grep -E -v '^#|^$' | grep minlen)
@@ -59,7 +59,7 @@ elif [ "$version" == "7.9" ] ; then
                         ucredit=$(cat $pwquality_conf | grep -E -v '^#|^$' | grep ucredit | awk -F= '{print $2}' | tr -d ' ')
                         lcredit=$(cat $pwquality_conf | grep -E -v '^#|^$' | grep lcredit | awk -F= '{print $2}' | tr -d ' ')
                         ocredit=$(cat $pwquality_conf | grep -E -v '^#|^$' | grep ocredit | awk -F= '{print $2}' | tr -d ' ')
-                        if [ $dcredit -gt 0 -a $ucredit -gt 0 -a $lcredit -gt 0 -a $ocredit -gt 0 ] ; then
+                        if [[ "$dcredit" -eq -1 ]] && [[ "$ucredit" -eq -1 ]] && [[ "$lcredit" -eq -1 ]] && [[ "ocredit" -eq -1 ]] ; then
                                 echo "[OK] 영문 숫자 특수문가자 혼합된 8글자 이상의 패스워드를 사용하고 있습니다." >> $RESULT
                                 retval="ok"
                         else
