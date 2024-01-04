@@ -17,37 +17,45 @@ vsftpd_result=0
 proftpd_result=0
 
 ftpusers_list=$(find / -type f -name "ftpusers")
-
-for ftpusers in $ftpusers_list
-do
-	cat $ftpusers | grep -v -E "^#|^$" | grep root 2> /dev/null > /dev/null
-	if [ $? -eq 0 ] ; then
-		OK "$ftpusers에 root 접근 제한 설정이 되어있습니다.">>$RESULT
-	else
-		WARN "$ftpusers에 root 접근 제한이 설정되지 않았습니다.">>$RESULT
-		vsfptd_result=1
-	fi
-done
-
+if [ ! "$ftpusers_list" == "" ] ; then
+        echo "hh"
+        for ftpusers in $ftpusers_list
+        do
+                cat $ftpusers | grep -v -E "^#|^$" | grep root 2> /dev/null > /dev/null
+                if [ $? -eq 0 ] ; then
+                        OK "$ftpusers에 root 접근 제한 설정이 되어있습니다.">>$RESULT
+                else
+                        WARN "$ftpusers에 root 접근 제한이 설정되지 않았습니다.">>$RESULT
+                        vsfptd_result=1
+                fi
+        done
+else
+        OK "ftpusers 파일이 없습니다.">>$RESULT
+fi
 proftpd_conf=$(find / -type f -name "proftpd.conf" | grep -v -E "tmp")
 
-result=$(cat $proftpd_conf | grep -v -E "#|^$" | grep "RootLogin" | awk '{print $2}')
+if [ ! "$proftpd_conf" == "" ] ; then
+        result=$(cat $proftpd_conf | grep -v -E "#|^$" | grep "RootLogin" | awk '{print $2}')
 
-if [ "$result" == "off" ] ; then
-	OK "$proftpd_conf에 root 접근 제한 설정이 되어있습니다.">>$RESULT
+        if [ "$result" == "off" ] ; then
+                OK "$proftpd_conf에 root 접근 제한 설정이 되어있습니다.">>$RESULT
+        else
+                WARN "$proftpd_conf에 root 접근 제한 설정이 되어있지 않습니다.">>$RESULT
+                proftpd_result=1
+        fi
 else
-	WARN "$proftpd_conf에 root 접근 제한 설정이 되어있지 않습니다.">>$RESULT
-	proftpd_result=1
+        OK "proftpd.conf파일이 없습니다.">>$RESULT
 fi
 
 echo >>$RESULT
 
 if [[ "$vsftpd_result" -gt 0 ]] || [[ "$proftpd_result" -gt 0 ]] ; then
-	WARN "ftpusers 파일에 root접근을 제한하는 설정을 해주세요.">>$RESULT
-	retval="warning"
+        WARN "ftpusers 파일에 root접근을 제한하는 설정을 해주세요.">>$RESULT
+        retval="warning"
 else
-	OK "설정이 올바르게 되어있습니다.">>$RESULT
-	retval="ok"
+        OK "설정이 올바르게 되어있습니다.">>$RESULT
+        retval="ok"
 fi
 
 echo "$retval"
+
