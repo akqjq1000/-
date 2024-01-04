@@ -1,0 +1,18 @@
+************************************************************************************
+ [U-36] 웹서비스 웹 프로세스 권한 제한
+ [양호] Apache 데몬이 root 권한으로 구동되지 않는 경우
+ [취약] Apache 데몬이 root 권한으로 구동되는 경우
+************************************************************************************
+[32m[ 양호 ] : /usr/local/src/httpd-2.4.58/docs/conf/httpd.conf의 데몬 구동 권한이 올바르게 설정되어 있습니다.[0m
+User daemon
+[32m[ 양호 ] : /usr/local/src/httpd-2.4.58/docs/conf/httpd.conf의 데몬 구동 권한이 올바르게 설정되어 있습니다.[0m
+Group daemon
+[32m[ 양호 ] : /usr/local/conf/original/httpd.conf의 데몬 구동 권한이 올바르게 설정되어 있습니다.[0m
+User daemon
+[32m[ 양호 ] : /usr/local/conf/original/httpd.conf의 데몬 구동 권한이 올바르게 설정되어 있습니다.[0m
+Group daemon
+[32m[ 양호 ] : /usr/local/conf/httpd.conf의 데몬 구동 권한이 올바르게 설정되어 있습니다.[0m
+User daemon
+[32m[ 양호 ] : /usr/local/conf/httpd.conf의 데몬 구동 권한이 올바르게 설정되어 있습니다.[0m
+Group daemon
+[32m[ 양호 ] : 데몬 구동 권한이 올바르게 설정되어 있습니다.[0m

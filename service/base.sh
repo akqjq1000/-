@@ -1,5 +1,7 @@
 #!/bin/bash
 
+. ./util/common.sh
+
 RESULT=./log/.log
 >$RESULT
 

@@ -13,31 +13,18 @@ echo "**************************************************************************
 
 retval=""
 
-version=$(getVersion)
-
 TMP1=./tmp/tmp1.log
 TMP2=./tmp/tmp2.log
 >$TMP1
 >$TMP2
 
+sendmail_latest_version="sendmail-8.17.2"
 
-if [ "$version" == "5.11" ] || [ "$version" == "6.10" ] ; then
-:
-else
-	systemctl list-unit-files | grep sendmail >> $TMP1
+INFO "https://ftp.sendmail.org/ 주소를 참조하세요.">>$RESULT
+INFO "현재 sendmail의 최신 버전은 $sendmail_latest_version 버전입니다.">>$RESULT
 
-	if [ $? = 0 ]; then
-		ps -ef | grep sendmail | grep -v grep >> $TMP1
-		result=$(timeout 1 bash -c "</dev/tcp/localhost/25"&& echo "Port is open" || echo "Port is closed")
-		if [ "$result" = "Port is open" ]; then
-			timeout 1 bash -c "sendmail -d0.1 -bt > ${TMP2}" 2>/dev/null >/dev/null
-			version=$(cat ./tmp/tmp2.log | grep Version | awk '{print $2}')
-			last_version=$(yum list sendmail | grep sendmail | awk '{print $2}' | awk -F- '{print $1}')
-			INFO 현재 버전은 $version 이고 최신 버전은 $last_version입니다.
-		fi
-	else
-		echo "service not exist"
-	fi
-fi
+WARN "현재 sendmail 버전은 $(rpm -qa | grep sendmail)이고, 최신 버전은 $sendmail_latest_version입니다.">>$RESULT
+
+retval="warning"
 
 echo "$retval"

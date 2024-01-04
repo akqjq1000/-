@@ -3,16 +3,11 @@
  [양호] crontab 명령어 일반사용자 금지 및 cron 관련 파일 640 이하인 경우
  [취약] crontab 명령어 일반사용자 사용가능하거나, crond 관련 파일 640 이상인 경우
 ************************************************************************************
-[WARN] /etc/cron.d의 권한이 640 이상입니다.
-drwxr-xr-x. 2 root root 4096 2023-04-04 19:13 /etc/cron.d
-[WARN] /etc/cron.daily의 권한이 640 이상입니다.
-drwxr-xr-x. 2 root root 4096 2011-09-27 10:33 /etc/cron.daily
+[OK] /etc/cron.d의 소유자가 root이고 권한이 640이하 입니다.
+[OK] /etc/cron.daily의 소유자가 root이고 권한이 640이하 입니다.
 [OK] /etc/cron.deny의 소유자가 root이고 권한이 640이하 입니다.
-[WARN] /etc/cron.hourly의 권한이 640 이상입니다.
-drwxr-xr-x. 2 root root 4096 2011-09-27 10:33 /etc/cron.hourly
-[WARN] /etc/cron.monthly의 권한이 640 이상입니다.
-drwxr-xr-x. 2 root root 4096 2011-09-27 10:33 /etc/cron.monthly
-[WARN] /etc/cron.weekly의 권한이 640 이상입니다.
-drwxr-xr-x. 2 root root 4096 2011-09-27 10:33 /etc/cron.weekly
+[OK] /etc/cron.hourly의 소유자가 root이고 권한이 640이하 입니다.
+[OK] /etc/cron.monthly의 소유자가 root이고 권한이 640이하 입니다.
+[OK] /etc/cron.weekly의 소유자가 root이고 권한이 640이하 입니다.
 [OK] /etc/crontab의 소유자가 root이고 권한이 640이하 입니다.
-[31m[ 취약 ] : 파일의 소유자 및 권한을 확인해주세요.[0m
+[32m[ 양호 ] : 파일의 소유자 및 권한이 올바르게 설정되었습니다.[0m
