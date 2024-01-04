@@ -1,0 +1,15 @@
+************************************************************************************
+ [U-71] Apache 웹 서비스 정보 숨김
+ [양호] ServerTokens Prod, ServerSignature Off로 설정되어있는 경우
+ [취약] ServerTokens Prod, ServerSignature Off로 설정되어있지 않은 경우
+************************************************************************************
+/usr/local/src/httpd-2.4.58/docs/conf/httpd.conf
+[31m[ 취약 ] : /usr/local/src/httpd-2.4.58/docs/conf/httpd.conf에 ServerTokens나 ServerSignature설정이 없습니다.[0m
+[31m[ 취약 ] : /usr/local/src/httpd-2.4.58/docs/conf/httpd.conf파일에 두 설정을 확인해주세요.[0m
+/usr/local/conf/original/httpd.conf
+[31m[ 취약 ] : /usr/local/conf/original/httpd.conf에 ServerTokens나 ServerSignature설정이 없습니다.[0m
+[31m[ 취약 ] : /usr/local/conf/original/httpd.conf파일에 두 설정을 확인해주세요.[0m
+/usr/local/conf/httpd.conf
+[32m[ 양호 ] : /usr/local/conf/httpd.conf에 ServerSignature 설정이 올바르게 되어있습니다.[0m
+[32m[ 양호 ] : /usr/local/conf/httpd.conf에 ServerTokens 설정이 올바르게 되어있습니다.[0m
+[32m[ 양호 ] : /usr/local/conf/httpd.conf의 모두 알맞은 설정이 되어있습니다.[0m

@@ -22,15 +22,20 @@ if [ -z $TMP1 ] ; then
 	OK "SMTP서비스를 사용하지 않습니다.">>$RESULT
 	retval="ok"
 else
-	grep -v '^ *#' /etc/mail/sendmail.cf | grep -i privacyoptions \
-	| grep restrictqrun >/dev/null 2>&1
- 
-	if [ $? -eq 0 ] ; then
-		OK "일반 사용자의 Sendmail 실행 방지가 설정 되어 있습니다.">>$RESULT
-		retval="ok"
+	if [ -e "/etc/mail/sendmail.cf" ] ; then
+		grep -v '^ *#' /etc/mail/sendmail.cf | grep -i privacyoptions \
+		| grep restrictqrun >/dev/null 2>&1
+	 
+		if [ $? -eq 0 ] ; then
+			OK "일반 사용자의 Sendmail 실행 방지가 설정 되어 있습니다.">>$RESULT
+			retval="ok"
+		else
+			WARN "일반 사용자의 Sendmail 실행 방지가 설정 되어 있지 않습니다.">>$RESULT
+			INFO "$FILE1 의 PrivacyOtions에 restrictqrun 옵션을 추가하십시오.">>$RESULT
+			retval="warning"
+		fi
 	else
-		WARN "일반 사용자의 Sendmail 실행 방지가 설정 되어 있지 않습니다.">>$RESULT
-		INFO "$FILE1 의 PrivacyOtions에 restrictqrun 옵션을 추가하십시오.">>$RESULT
+		WARN "설정 파일이 없습니다">>$RESULT
 		retval="warning"
 	fi
 fi

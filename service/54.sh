@@ -13,26 +13,19 @@ echo "**************************************************************************
 
 retval=""
 
-conf_list=$(find / -type f -name "httpd.conf")
-
 conf_result=0
 
-for conf in $conf_list
-do
-        cat $conf | grep -v -E "#|^$" | grep Options | grep Indexes 2>/dev/null > /dev/null
-        if [ $? -eq 0 ] ; then
-                WARN "$conf의 디렉토리 검색 기능이 활성화 되어 있습니다.">>$RESULT
-                conf_result=$(($conf_result+1))
-        else
-                OK "$conf의 디렉토리 검색 기능이 비활성화 되어 있습니다.">>$RESULT
-        fi
-done
+TMP2=./tmp/tmp2.log
+>$TMP2
 
-if [[ "$conf_result" -gt 0 ]] ; then
-        WARN "디렉토리 검색 기능을 비활성화 해주세요.">>$RESULT
+find / -type f -name "manual" 2> /dev/null > $TMP2
+
+if [ -s $TMP2 ] ; then
+	cat $TMP2 >> $RESULT
+        WARN "Apache 관련 파일을 제거해주세요.">>$RESULT
         retval="warning"
 else
-        OK "디렉토리 검색 기능이 모두 비활성화 되어 있습니다.">>$RESULT
+        OK "필요하지 않은 파일이 없습니다. ">>$RESULT
         retval="ok"
 fi
 

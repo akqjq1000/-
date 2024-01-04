@@ -17,8 +17,6 @@ for ((i = 1; i <= total_lines; i++)); do
     result=$(echo "${line}" | awk '{print $2}' | tr -d '.')
     if [[ "$result" =~ ^[0-9]+$ ]] ; then
 	if retval=$(eval "./service/$result.sh" 2>&1); then
-	#if retval=$(eval "./test/$result.sh" 2>&1); then
-	    echo $retval | tr -d '\n'
 	    if [ "$retval" = "ok" ] ; then
 		echo -e '\033[32m'"$line"'\033[0m' >> $process_log
 		echo -e '\033[32m'"$line"'\033[0m'
