@@ -1,2 +1,7 @@
 root      71074      1  0  1월03 ?      00:00:03 sendmail: accepting connections
 smmsp     71139      1  0  1월03 ?      00:00:00 sendmail: Queue runner@01:00:00 for /var/spool/clientmqueue
+root      91616  91608  0 20:50 ?        00:00:00 /usr/sbin/sendmail -FCronDaemon -i -odi -oem -oi -t -f root
+root      91617  91609  0 20:50 ?        00:00:00 /usr/sbin/sendmail -FCronDaemon -i -odi -oem -oi -t -f root
+root      91618  91606  0 20:50 ?        00:00:00 /usr/sbin/sendmail -FCronDaemon -i -odi -oem -oi -t -f root
+root      91619  91607  0 20:50 ?        00:00:00 /usr/sbin/sendmail -FCronDaemon -i -odi -oem -oi -t -f root
+root      91620  91610  0 20:50 ?        00:00:00 /usr/sbin/sendmail -FCronDaemon -i -odi -oem -oi -t -f root

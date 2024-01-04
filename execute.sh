@@ -8,6 +8,9 @@ process_log=./log/process.log
 >$process_log
 # 파일의 총 라인 수 가져오기
 total_lines=$(wc -l < "$file_path")
+warning_list=./log/warning_list.log
+>$warning_list
+
 
 # 파일을 1초 간격으로 읽어와서 색상을 변환하여 출력
 for ((i = 1; i <= total_lines; i++)); do
@@ -23,6 +26,9 @@ for ((i = 1; i <= total_lines; i++)); do
 	    else
 		echo -e '\033[31m'"$line"'\033[0m' >> $process_log
 		echo -e '\033[31m'"$line"'\033[0m'
+		
+		cat ./log/$result.log >> $warning_list
+		echo >>$warning_list
 	    fi
 	    #sleep 1
 	else

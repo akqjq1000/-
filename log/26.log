@@ -34,6 +34,11 @@ test:/home/test
 --w--w--w- 1 root root 0 12월 19 09:05 /sys/fs/cgroup/hugetlb/cgroup.event_control
 --w--w--w- 1 root root 0 12월 19 09:05 /sys/fs/cgroup/memory/cgroup.event_control
 --w--w--w- 1 root root 0 12월 19 09:05 /sys/fs/cgroup/net_cls,net_prio/cgroup.event_control
+--w--w--w- 1 root root 0 1월 4 20:50 /sys/fs/cgroup/systemd/user.slice/user-0.slice/session-23980.scope/cgroup.event_control
+--w--w--w- 1 root root 0 1월 4 20:50 /sys/fs/cgroup/systemd/user.slice/user-0.slice/session-23984.scope/cgroup.event_control
+--w--w--w- 1 root root 0 1월 4 20:50 /sys/fs/cgroup/systemd/user.slice/user-0.slice/session-23983.scope/cgroup.event_control
+--w--w--w- 1 root root 0 1월 4 20:50 /sys/fs/cgroup/systemd/user.slice/user-0.slice/session-23982.scope/cgroup.event_control
+--w--w--w- 1 root root 0 1월 4 20:50 /sys/fs/cgroup/systemd/user.slice/user-0.slice/session-23981.scope/cgroup.event_control
 --w--w--w- 1 root root 0 1월 2 11:31 /sys/fs/cgroup/systemd/user.slice/user-0.slice/session-20476.scope/cgroup.event_control
 --w--w--w- 1 root root 0 12월 27 17:38 /sys/fs/cgroup/systemd/user.slice/user-0.slice/session-12060.scope/cgroup.event_control
 --w--w--w- 1 root root 0 12월 19 09:05 /sys/fs/cgroup/systemd/user.slice/user-0.slice/session-1.scope/cgroup.event_control
